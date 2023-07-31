@@ -21,8 +21,8 @@ const [successMessage, setSuccessMessage] = useState(null)
     return (
         <>
         <h2>Authenticate!</h2>
-        {error && <p>{error}</p>}
-        {successMessage && <p>{successMessage}</p>}
+        {error && <p id="failure">{error}</p>}
+        {successMessage && <p className="win">{successMessage}</p>}
         <button onClick={handleClick}>Authenticate Token</button>
         </>
     );

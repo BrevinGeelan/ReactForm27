@@ -55,18 +55,18 @@ export default function SignUpForm ({ setToken }) {
     return (
         <>
         <h2>Sign Up!</h2>
-        {error && <p>{error}</p>}
+        {error && <p className="fail">{error}</p>}
         <form onSubmit={handleSubmit}>
             <label>
                 Username:{""} 
                 <input value={username} onChange={(e) => setUsername(e.target.value)} />
             </label>
-            {usernameError && <p>{usernameError}</p>}
+            {usernameError && <p className="fail">{usernameError}</p>}
             <label>
                 Password:{""}
                  <input value={password} onChange={(e) => setPassword(e.target.value)} />
             </label>
-            {passwordError && <p>{passwordError}</p>}
+            {passwordError && <p className="fail">{passwordError}</p>}
             <button>Submit</button>
         </form>
         </>
